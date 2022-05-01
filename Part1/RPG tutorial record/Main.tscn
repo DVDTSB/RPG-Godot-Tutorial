@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Items/Key.tres" type="Resource" id=3]
+[ext_resource path="res://Items/Diamond.tres" type="Resource" id=4]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6, -1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 57.0
+margin_top = 24.0
+margin_right = 128.0
+margin_bottom = 80.0
+
+[node name="Hat" parent="." instance=ExtResource( 2 )]
+position = Vector2( -52, 21 )
+
+[node name="Key" parent="." instance=ExtResource( 2 )]
+position = Vector2( -15, 24 )
+item = ExtResource( 3 )
+
+[node name="Key2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -37, -20 )
+item = ExtResource( 4 )
